@@ -13,6 +13,10 @@ namespace Inventario_Net6
 
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //Configuar el servicio  automapper
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("defaultConnection"), builder =>

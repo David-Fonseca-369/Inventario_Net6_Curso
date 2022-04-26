@@ -22,10 +22,7 @@ namespace Inventario_Net6.Controllers
         [HttpGet("todos")]
         public async Task<ActionResult<List<Rol>>> Todos()
         {
-
-             return await context.Roles.Where(x => x.Estado).ToListAsync();
-
-            
+             return await context.Roles.ToListAsync();            
         }
     }
 }

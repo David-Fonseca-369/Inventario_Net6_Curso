@@ -14,8 +14,10 @@ namespace Inventario_Net6
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new RolMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
         }
 
         public DbSet<Rol> Roles { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
