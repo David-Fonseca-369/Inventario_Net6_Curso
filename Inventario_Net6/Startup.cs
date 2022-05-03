@@ -30,7 +30,8 @@ namespace Inventario_Net6
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+                    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()
+                    .WithExposedHeaders(new string[] {"cantidadTotalRegistros"});
                 });
             });
 

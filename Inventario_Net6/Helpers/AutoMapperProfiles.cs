@@ -12,6 +12,9 @@ namespace Inventario_Net6.Helpers
             //Mapeo de doble vía
             CreateMap<Usuario, UsuarioEditarDTO>().ReverseMap();
 
+            ///
+            CreateMap<UsuarioCreacionDTO, Usuario>();
+
         }
     }
 }
